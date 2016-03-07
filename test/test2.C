@@ -45,6 +45,9 @@ void test2()
     factor->addNode(histo, {}, {1,2});
     factor->addNode(form, {0,1}, {});
 
+
+    factor->value({2,5.5,5.5});
+
     TFile* file = TFile::Open("test.root", "recreate");
     file->WriteObject(factor, "ff");
     file->Close();
